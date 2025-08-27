@@ -1,5 +1,8 @@
 #Requires AutoHotkey v2.0
 
+; Include utils
+#Include utils\uiux.ahk
+
 ;; This file setups the hot corner concept on windows. Keeping the mouse over more than X ms in a corner
 ;; will trigger an action.
 
@@ -14,11 +17,6 @@ global config := {
 global state := {
     mouse_in_corner_since: -1,  ; Counter to mesure the time spend by the mouse cursor in a zone.
     action_was_triggered: false  ; Indicates if an action was just triggered. Used to avoid to trigger several times an action by staying in a corner too long
-}
-
-ShowToolTip(message) {
-    ToolTip message
-    SetTimer(() => ToolTip(), -1000)
 }
 
 ;;; Returns true if the point "p" is in the zone "z" of size "sz" (in pixels)

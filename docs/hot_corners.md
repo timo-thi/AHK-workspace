@@ -8,6 +8,7 @@
 ```txt
 This script implements the "Hot corners" feature available on some linux systems (mac too ?): when you keep your mouse cursor in one of the corners of your screen, the scripts triggers some action depending of configuration and the corner used.
 ```
+**Pre-compiled version**: Unavailable, this script needs configuration on your environment.
 
 ## Issues
 

@@ -50,9 +50,9 @@ For now, there are three ways to use the scripts:
 
 ## All the scripts :
 
-| Script              | Doc path                                               | Script Path                                                        |
-| ------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ |
-| Flameshot shortcut  | [docs/flameshot.md](docs/flameshot.md)                 | [scripts/flameshot_shortcut.ahk](scripts/flameshot_shortcut.ahk)   |
-| Hot corners         | [docs/hot_corners.md](docs/hot_corners.md)             | [scripts/hot_corners.ahk](scripts/hot_corners.ahk)                 |
-| Powershell shortcut | [docs/powershell.md](docs/powershell.md)               | [scripts/powershell_shortcut.ahk](scripts/powershell_shortcut.ahk) |
-| Scroll workspaces   | [docs/scroll_workspaces.md](docs/scroll_workspaces.md) | [scripts/scroll_workspaces.ahk](scripts/scroll_workspaces.ahk)     |
+| Script              | Doc path                                               | Script Path                                                        | Pre-compiled available |
+| ------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------- |
+| Flameshot shortcut  | [docs/flameshot.md](docs/flameshot.md)                 | [scripts/flameshot_shortcut.ahk](scripts/flameshot_shortcut.ahk)   | ✅                     |
+| Hot corners         | [docs/hot_corners.md](docs/hot_corners.md)             | [scripts/hot_corners.ahk](scripts/hot_corners.ahk)                 | ❌                     |
+| Powershell shortcut | [docs/powershell.md](docs/powershell.md)               | [scripts/powershell_shortcut.ahk](scripts/powershell_shortcut.ahk) | ✅                     |
+| Scroll workspaces   | [docs/scroll_workspaces.md](docs/scroll_workspaces.md) | [scripts/scroll_workspaces.ahk](scripts/scroll_workspaces.ahk)     | ✅                     |

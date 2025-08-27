@@ -8,6 +8,7 @@
 ```txt
 Allows you to switch between workspaces (aka desktops) by scrolling on the top side of your screen.
 ```
+**Pre-compiled version**: Available.
 
 ## Issues
 
