@@ -7,24 +7,41 @@
 ;; will trigger an action.
 
 ;; General
-
+/**
+ * Configuration settings for hot corners
+ * @property corner_size The size of the corner zone (in pixels)
+ * @property checking_period The time between two mouse position checks (in milliseconds)
+ */
 global config := {
-    corner_size: 5,  ; The mouse is considered in the corner if the position is in a 'corner_size' square in one of the corners.
-    checking_period: 100,  ; Time between two mouse position checks.
+    corner_size: 5,
+    checking_period: 100,
 }
 
 ;; DO NOT EDIT
+/**
+ * Configuration settings for hot corners
+ * @property mouse_in_corner_since The time (in ms) the mouse has been in the corner
+ * @property action_was_triggered Indicates if an action was just triggered
+ */
 global state := {
-    mouse_in_corner_since: -1,  ; Counter to mesure the time spend by the mouse cursor in a zone.
-    action_was_triggered: false  ; Indicates if an action was just triggered. Used to avoid to trigger several times an action by staying in a corner too long
+    mouse_in_corner_since: -1,
+    action_was_triggered: false
 }
 
-;;; Returns true if the point "p" is in the zone "z" of size "sz" (in pixels)
+/**
+ * Check if a point is within a specified zone
+ * @param p The point to check (array with x and y coordinates)
+ * @param z The zone to check against (array with x and y coordinates)
+ * @param sz The size of the zone (in pixels)
+ */
 InZone(p, z, sz) {
     return (p[1] >= z[1] && p[1] <= z[1] + sz && p[2] >= z[2] && p[2] <= z[2] + sz)
 }
 
-;;; Returns tl|tr|bl|br or false to indicate the corner where the cursor is (or false if none)
+/**
+ * Get the current corner the mouse is in
+ * @returns "tl"|"tr"|"bl"|"br" or false if not in a corner
+ */
 GetCurrentCorner() {
     global config
 
@@ -46,6 +63,10 @@ GetCurrentCorner() {
     return false
 }
 
+/**
+ * Action mapping for each corner
+ * @type Map
+ */
 action_mapper := Map(
     ;; ========== Corner top left ==========
     "tl", Map(
@@ -100,6 +121,9 @@ TriggerBottomRightAction() {
 
 ;; Main loop
 
+/**
+ * Check the mouse position and trigger actions if necessary
+ */
 CheckMouse() {
     ; Get states
     global state
